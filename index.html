@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képek</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="vezerlo">
+        <label>Válassz képet:</label>
+        <br>
+        <select id="kepek_lista" size="4" onchange="KepValtoz(this)">
+            <option value="dice.jpg">dice.jpg</option>
+            <option value="hotdog.jpg">hotdog.jpg</option>
+            <option value="penguin.jpg">penguin.jpg</option>
+            <option value="shrek.jpg">shrek.jpg</option>
+        </select>
+
+        <label for="">Magasság</label>
+        <input type="range" min="10" max="600" value="100" class="slider" id="sliHeight" onchange="ChangeHeight()">
+
+        <label for="">Szélesség</label>
+        <input type="range" min="10" max="600" value="200" class="slider" id="sliWidth" onchange="ChangeWidth()">
+
+
+        <!-- <select id="kepek_lista" size="4" onchange="EffectValtoz(this)">
+            <option value="blur">blur</option>
+            <option value="opacity">opacity</option>
+            <option value="blur">penguin.jpg</option>
+            <option value="blur">shrek.jpg</option>
+        </select>
+        <select id="kepek_lista" size="4" onchange="EffectTorol(this)">
+            
+        </select> -->
+        
+        <label for="blur">blur</label>
+        <input type="checkbox" name="blur" id="blur" onchange="Blur()">
+
+        <label for="opacity">opacity</label>
+        <input type="checkbox" name="opacity" id="opacity" onchange="Opacity()">
+
+    </div>
+    <div>
+        <img src="default.jpg" alt="default" id="image">
+    </div>
+
+    <script>ChangeWidth()
+            ChangeHeight()
+            Blur()
+            Opacity()</script>
+</body>
+
+</html>
